@@ -4,31 +4,82 @@
 <head>
     <title>Hotel Booking Form</title>
     <style>
-        
+        body{
+           background-color: #87CEEB;
+           margin:0px;
+           padding:0px;
+           
+        }
+        h1{
+            text-align: center;
+        }
+        .form_style{
+            margin-top: 30px;
+            margin-left: 20%;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: larger;
+
+            
+        }
+        .bold{
+            font-weight: bold;
+        }
+        .btn{
+            margin-left:30%;
+            text-align: center;
+            padding: 10px 30px;
+            background-color: rgb(35, 35, 128);
+            color: white;
+            border-radius: 5px;
+            border: none;
+            font-size: large;
+            
+
+        }
+        .btn:hover{
+            box-shadow: 0 0  2px 2px grey;
+        }
+        .disclamer{
+            font-size: 18px;
+            text-align: justify;
+
+        }
+        .text_type{
+            border-radius: 2px;
+            margin: 10px 20px;
+            padding: 10px 20px;
+            
+        }
+
+
     </style>
+    <script>
+        
+    </script>
 </head>
 
-<body bgcolor="#87CEEB">
+<body>
     <img src="hotel-banner.png" height="300px" width="1300px" alt="Hotel backgroun image" />
     <h1>
         Hotel Guest Registration Form</h1><br />
-    <form>
+    <form class="form_style">
 
-        <label for="name">Name*</label>
+        <label for="name" class="bold">Name*</label>
         <br /><br />
 
         <input type="text" id="fname" placeholder="First Name" required />
         <input type="text" id="lname" placeholder="Last Name" required />
         <br /><br /><br />
 
-        <label for="email">Email*</label> <label for="phoneNo">Phone Number*</label>
-        <br /><br />
+        <label for="email" class="bold">Email*</label> 
 
-        <input type="email" id="email" required />
+        <input type="email" id="email" class="bold" required />
+        <br /><br /><br />
+        <label for="phoneNo" class="bold">Phone Number*</label>
         <input type="tel" id="phoneNo" required />
         <br /><br /><br />
 
-        <label for="address">Address*</label>
+        <label for="address" class="bold">Address*</label>
         <br /><br />
 
         <input type="text" id="street_add1" placeholder="Street Address" required />
@@ -38,7 +89,7 @@
         <input type="text" id="state" placeholder="State/Province" required />
         <br /><br /><br />
 
-        <label>Nationality*</label>
+        <label class="bold">Nationality*</label>
         <br /><br />
 
         <select required>
@@ -58,9 +109,9 @@
         <h2> Booking Informtaion</h2>
         <br />
 
-        <label for="checkin">Check-in Date</label>
+        <label for="checkin" class="bold">Check-in Date</label>
 
-        <label for="checkout">Check-out Date</label>
+        <label for="checkout" class="bold">Check-out Date</label>
         <br /><br />
 
         <input type="date" id="checkin" />
@@ -68,9 +119,9 @@
         <input type="date" id="checkout" />
         <br /><br /><br />
 
-        <label for="pickup_date">Pick-up Date</label>
+        <label for="pickup_date" class="bold">Pick-up Date</label>
 
-        <label for="pickup_time">Pick-up Time</label>
+        <label for="pickup_time" class="bold">Pick-up Time</label>
         <br /><br />
 
         <input type="date" id="pickup_date" />
@@ -78,7 +129,7 @@
         <input type="time" id="pickup_time" />
         <br /><br /><br />
 
-        <label for="address">Pick-Up Location*</label>
+        <label for="address" class="bold">Pick-Up Location*</label>
         <br /><br />
 
         <input type="text" id="street_add1" placeholder="Street Address" required />
@@ -89,9 +140,9 @@
         <br /><br /><br />
 
 
-        <label for="roomType">Room Type</label>
+        <label for="roomType" class="bold">Room Type</label>
 
-        <label for="smoking">Smoking</label>
+        <label for="smoking" class="bold">Smoking</label>
         <br /><br />
 
         <select id="roomType">
@@ -111,12 +162,12 @@
         </select>
         <br /><br /><br />
 
-        <label for="ofguest">#of Guests</div></label><br /><br />
+        <label for="ofguest" class="bold">#of Guests</div></label><br /><br />
 
         <input type="text" id="ofguest" placeholder="e.g., 4" required />
         <br /><br /><br />
 
-        <label for="notes">Notes</label>
+        <label for="notes" class="bold">Notes</label>
         <br /><br />
 
 
@@ -124,18 +175,18 @@
         <br /><br /><br />
 
 
-        <label>The submission of this form makes a reservation for the type of room selected in the form. Any changes
+        <label class="disclamer">The submission of this form makes a reservation for the type of room selected in the form. Any changes
             prior the scheduled occupancy should be
             <br />
             communicated to us at least 24 hours prior, which may be subject to availability of request.</label>
         <br /><br />
 
-        <label> Check-in time shall be at 2:00PM and checkout time shall be at 12:00NN.</label>
+        <label class="disclamer"> Check-in time shall be at 2:00PM and checkout time shall be at 12:00NN.</label>
 
         <br /><br /><br />
 
-        <input type="submit" value="          
-           Register           " id="submit" />
+        <button class="btn">Register</button>
+        <br /><br />
 
     </form>
 </body>
