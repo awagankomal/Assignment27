@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hotel Booking Form</title>
+</head>
+
+<body bgcolor="#87CEEB">
+    <img src="hotel-banner.png" height="300px" width="1300px" alt="Hotel backgroun image" />
+    <h1>
+        Hotel Guest Registration Form</h1><br />
+    <form>
+
+        <label for="name">Name*</label>
+        <br /><br />
+
+        <input type="text" id="fname" placeholder="First Name" required />
+        <input type="text" id="lname" placeholder="Last Name" required />
+        <br /><br /><br />
+
+        <label for="email">Email*</label> <label for="phoneNo">Phone Number*</label>
+        <br /><br />
+
+        <input type="email" id="email" required />
+        <input type="tel" id="phoneNo" required />
+        <br /><br /><br />
+
+        <label for="address">Address*</label>
+        <br /><br />
+
+        <input type="text" id="street_add1" placeholder="Street Address" required />
+        <input type="text" id="city" placeholder="City" required />
+
+        <input type="number" id="pinCode" placeholder="Postal/Zipcode" required />
+        <input type="text" id="state" placeholder="State/Province" required />
+        <br /><br /><br />
+
+        <label>Nationality*</label>
+        <br /><br />
+
+        <select required>
+            <option>Afghanistan</option>
+            <option>Bangladesh</option>
+            <option>China</option>
+            <option>Denmark</option>
+            <option>Egypt</option>
+            <option>France</option>
+            <option>Germany</option>
+            <option>Hong Kong</option>
+            <option>India</option>
+            <option>Japan/option>
+        </select>
+        <br /><br /><br /><br /><br />
+
+        <h2> Booking Informtaion</h2>
+        <br />
+
+        <label for="checkin">Check-in Date</label>
+
+        <label for="checkout">Check-out Date</label>
+        <br /><br />
+
+        <input type="date" id="checkin" />
+
+        <input type="date" id="checkout" />
+        <br /><br /><br />
+
+        <label for="pickup_date">Pick-up Date</label>
+
+        <label for="pickup_time">Pick-up Time</label>
+        <br /><br />
+
+        <input type="date" id="pickup_date" />
+
+        <input type="time" id="pickup_time" />
+        <br /><br /><br />
+
+        <label for="address">Pick-Up Location*</label>
+        <br /><br />
+
+        <input type="text" id="street_add1" placeholder="Street Address" required />
+        <input type="text" id="city" placeholder="City" required />
+
+        <input type="number" id="pinCode" placeholder="Postal/Zipcode" required />
+        <input type="text" id="state" placeholder="State/Province" required />
+        <br /><br /><br />
+
+
+        <label for="roomType">Room Type</label>
+
+        <label for="smoking">Smoking</label>
+        <br /><br />
+
+        <select id="roomType">
+            <option>Please select</option>
+            <option>Single(Rs.500)</option>
+            <option>Double(Rs.1000)</option>
+            <option>Queen(Rs.1200)</option>
+            <option>King(R.1500)</option>
+            <option>2-BedRoom(Rs.2000)</option>
+            <option>Suit(Rs.2500)</option>
+        </select>
+
+        <select id="smoking">
+            <option>Please select</option>
+            <option>Yes</option>
+            <option>No</option>
+        </select>
+        <br /><br /><br />
+
+        <label for="ofguest">#of Guests</div></label><br /><br />
+
+        <input type="text" id="ofguest" placeholder="e.g., 4" required />
+        <br /><br /><br />
+
+        <label for="notes">Notes</label>
+        <br /><br />
+
+
+        <textarea id="notes"></textarea>
+        <br /><br /><br />
+
+
+        <label>The submission of this form makes a reservation for the type of room selected in the form. Any changes
+            prior the scheduled occupancy should be
+            <br />
+            communicated to us at least 24 hours prior, which may be subject to availability of request.</label>
+        <br /><br />
+
+        <label> Check-in time shall be at 2:00PM and checkout time shall be at 12:00NN.</label>
+
+        <br /><br /><br />
+
+        <input type="submit" value="          
+           Register           " id="submit" />
+
+    </form>
+</body>
+
+</html>
