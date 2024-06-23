@@ -54,12 +54,77 @@
 
     </style>
     <script>
-        
+        let over_count=0;
+        let move_count=0;
+        let move_out_count=0;
+        let btn_click_count=0;
+        let btn_dbl_click_count=0;
+        let key_press_count=0;
+        let key_up_count=0;
+        let key_down_count=0;
+        let change_count=0;
+        let load_count=0;
+        function  imageOver(){
+           console.log("Image over");
+           over_count++;
+           console.log(`Image over_count: ${over_count}`);
+
+        }
+        function  onMove(){
+           console.log("Mouse move on Image");
+           move_count++;
+           console.log(`Image on move_count: ${move_count}`);
+
+        }
+        function  onMoveOut(){
+           console.log("Mouse move Out of Image");
+           move_out_count++;
+           console.log(`Image mouse move_out_count: ${move_out_count}`);
+
+        }
+        function onBtnClick(){
+           alert("Are you sure? you want to submit Form?");
+           btn_click_count++;
+           console.log(`btn click_count: ${btn_click_count}`);
+        }
+        function onBtndblClick(){
+           console.log("double click Event, Explore Hotel_Gallery section");
+           btn_dbl_click_count++;
+           console.log(`double click_count: ${btn_dbl_click_count}`);
+        }
+        function keyPress(){
+        console.log('keyPress()')
+        key_press_count++;
+        console.log(`key_press_count: ${key_press_count}`);
+
+       }
+
+       function keyDown(){
+        console.log('keyDown()')
+        key_down_count++;
+        console.log(`key_down_count: ${key_down_count}`);
+       }
+
+       function keyUp(){ 
+        console.log('keyUp()');
+        key_up_count++;
+        console.log(`key_up_count: ${key_up_count}`);
+       }
+       function change(){
+        console.log('change occured')
+        change_count++;
+        console.log(`change_count: ${change_count}`);
+       }
+       function load(){
+        console.log('page loaded')
+        load_count++;
+        console.log(`load_count: ${load_count}`);
+       }
     </script>
 </head>
 
-<body>
-    <img src="hotel-banner.png" height="300px" width="1300px" alt="Hotel backgroun image" />
+<body onchange="change()" onload="load()">
+    <img src="hotel-banner.png" height="300px" width="1300px" alt="Hotel backgroun image" onmouseover="imageOver()" onmouseout="onMoveOut()" onmousemove="onMove()" ondblclick="onBtndblClick()"/>
     <h1>
         Hotel Guest Registration Form</h1><br />
     <form class="form_style">
@@ -67,8 +132,8 @@
         <label for="name" class="bold">Name*</label>
         <br /><br />
 
-        <input type="text" id="fname" placeholder="First Name" required />
-        <input type="text" id="lname" placeholder="Last Name" required />
+        <input type="text" id="fname" placeholder="First Name" onkeydown="keyDown()"  onkeyup="keyUp()" onkeypress="keyPress()" required/>
+        <input type="text" id="lname" placeholder="Last Name"  onkeydown="keyDown()"  onkeyup="keyUp()" onkeypress="keyPress()" required/>
         <br /><br /><br />
 
         <label for="email" class="bold">Email*</label> 
@@ -185,7 +250,7 @@
 
         <br /><br /><br />
 
-        <button class="btn">Register</button>
+        <input type="button" value="Register"class="btn" onclick="onBtnClick()" />
         <br /><br />
 
     </form>
